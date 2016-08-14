@@ -9,42 +9,48 @@
         <script src="~/Scripts/jquery-3.1.0.js"></script>
         <script src="~/Scripts/angular.min.js"></script>
         <script src="~/App/app.js"></script>
+        <script src="~/App/Scripts.js"></script>
         <script src="~/App/Overview/Overview-Controller.js"></script>
         <script src="~/App/Portfolio/Portfolio-Controller.js"></script>
-       
+        <script src="~/App/WhatWeDo/WhatWeDo-Controller.js"></script>
+        <script src="~/App/OurClient/OurClient-Controller.js"></script>
+        <script src="~/App/WhyUs/WhyUs-Controller.js"></script>
+        <!-- Bootstrap -->
+        <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <script src="~/bootstrap/js/bootstrap.min.js"></script>
         <meta name="viewport" content="width=device-width" />
     </head>
     <body >
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title"><a href="~/">your logo here</a></p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @if (WebSecurity.IsAuthenticated) {
-                            <text>
-                                Hello, <a class="email" href="~/Account/Manage" title="Manage">@WebSecurity.CurrentUserName</a>!
-                                <form id="logoutForm" action="~/Account/Logout" method="post">
-                                    @AntiForgery.GetHtml()
-                                    <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
-                                </form>
-                            </text>
-                        } else {
-                            <ul>
-                                <li><a href="~/Account/Register">Register</a></li>
-                                <li><a href="~/Account/Login">Log in</a></li>
+
+        <header class="fixed-nav">
+        <div>
+            
+                <nav>
+                    <ul id="menu" class="nav nav-tabs">
+                        <li><div class="float-left">
+                            <p class="site-title"><a href="~/"><img src="~/Content/Images/oneDesignLogo.png" class="nav-logo-img" /></a></p>
+                        </div></li>
+                        <li><a href="#Overview">Overview</a></li>
+                        <li><a href="#WhyUs">Why Us</a></li>
+                        <li><a href="#WhatWeDo">What We Do</a></li>
+                        <li><a href="#Clients">Our Clients</a></li>
+                        <li><a href="~/Contact">Portfolio</a></li>
+
+                        <li role="presentation" class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                Dropdown <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#Overview">Overview</a></li>
+                                <li><a href="#WhyUs">Why Us</a></li>
+                                <li><a href="#WhatWeDo">What We Do</a></li>
+                                <li><a href="#Clients">Our Clients</a></li>
+                                <li><a href="~/Contact">Portfolio</a></li>
                             </ul>
-                        }
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li><a href="~/">Home</a></li>
-                            <li><a href="~/About">About</a></li>
-                            <li><a href="~/Contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                        </li>
+
+                    </ul>
+                </nav>
             </div>
         </header>
         <div id="body" ng-app="Main">
