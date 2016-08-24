@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>@Page.Title - My ASP.NET Web Page</title>
+        <link href="~/Content/font/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
         <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
         <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -27,8 +28,8 @@
             
                 <nav>
                     <ul id="menu" class="nav nav-tabs">
-                        <li><div class="float-left">
-                            <p class="site-title"><a href="~/"><img src="~/Content/Images/oneDesignLogo.png" class="nav-logo-img" /></a></p>
+                        <li id="icon"><div class="float-left">
+                            <a href="~/"><img src="~/Content/Images/oneDesignLogo.png" class="nav-logo-img" /></a>
                         </div></li>
                         <li><a href="#Overview">Overview</a></li>
                         <li><a href="#WhyUs">Why Us</a></li>
@@ -61,9 +62,18 @@
             
         </div>
         <footer>
-            <div class="content-wrapper">
+            <div class="footer-area">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET Web Page</p>
+                    <p>&copy; @DateTime.Now.Year - OneDesign</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/onedesign.ofc/" class="social-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/onedesign10" class="social-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    
+                </div>
+                <div >
+                    <a href="mailto:onedesign.op@gmail.com" class="social-link"><i class="social-icons fa fa-envelope-o" aria-hidden="true"></i></a>: onedesign.op@gmail.com &nbsp;&nbsp;
+                    <i class="social-link social-icons fa fa-whatsapp" aria-hidden="true"></i>: 0852 1883 4777
                 </div>
             </div>
         </footer>
